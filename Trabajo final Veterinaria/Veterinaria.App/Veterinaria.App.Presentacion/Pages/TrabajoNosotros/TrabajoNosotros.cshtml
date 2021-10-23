@@ -1,0 +1,101 @@
+﻿@page
+@model Veterinaria.App.Presentacion.Pages.TrabajoNosotrosModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/trabajoNosotros.css">
+</head>
+<div class="tradiv1">
+<img class ="traimg" src="~/img/tra1.png" 
+    alt="https://drive.google.com/file/d/1Pp_5tCbscJBmoNqw2WsRMIzPrxImlNdr/view?usp=sharing">
+    </div>
+<div class="container" style="margin-top: 60px">
+    <h3 class="trah1">Has parte de nuestro grupo de profesionales</h3>
+    <h5>Diligencia este formulario</h5>
+
+
+    <!--  Fila 1  -->
+    <div class="container">
+            <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Nombres*</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="digite su nombre , campo obligatorio*">
+                </div>
+            </div>
+            
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Apellidos*</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="digite sus apellidos, campo obligatorio*">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+            <!--  Fila 2  -->
+            <div class="container">
+            <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Numero de Documento*</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="digite Numero de documento , campo obligatorio*">
+                </div>
+            </div>
+            
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Email*</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="digite su email, campo obligatorio*">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--  Fila 3  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Tarjeta profesional*</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1"
+                        placeholder="digite el numero de su tarjeta profesional, campo obligatorio*">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Especialidad</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>Urgencias </option>
+                        <option>Consulta médica general</option>
+                        <option>Esterilización</option>
+                        <option>Desparacitación</option>
+                        <option>Profilaxis</option>
+                        <option>Consulta de nutrición</option>
+                        <option>Consulta de Geriátrica</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <!--  contrasena  -->
+        <form>
+           
+
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>

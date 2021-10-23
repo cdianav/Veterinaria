@@ -1,0 +1,33 @@
+.admdv2{
+    margin: 0px 0px 0px 0px ;
+}
+
+.admh1{
+    padding: 10px 0px 10px 0px;
+    background-color: #2c9b9b;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    font-family: inherit;
+}
+.admdv2{
+    padding: 10px 0px 0px 0px;
+   
+}
+.adminimg1{
+    
+    width: 150px;
+}
+.admdv3{
+    margin: 0px 0px -90px 80px ;
+}
+.card-header{
+    
+    border-radius: 5px;
+}
+.btn{
+    color: #2c9b9b;
+}
+.form-row{
+    padding: 5px;
+}

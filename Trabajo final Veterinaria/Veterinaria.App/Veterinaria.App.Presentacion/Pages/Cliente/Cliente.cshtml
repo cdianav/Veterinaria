@@ -1,0 +1,560 @@
+﻿@page
+@model Veterinaria.App.Presentacion.Pages.ClienteModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/cliente.css">
+</head>
+<div class="clidv3">
+<img class ="cliimg" src="~/img/gato.png" class="img-fluid">
+</div>
+<div class="container" style="margin-top: 60px">
+    <div class="clidv2">
+        <h2 class="clih1">Agenda y consulta las citas de tus mascotas</h2>
+    </div>
+
+    <!-- Nave -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                aria-selected="true">Citas médicas</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                aria-selected="false">Vacunación</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                aria-selected="false">Ordenes médicas</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+
+        <!-- contenido de cada tap -->
+        <!-- contenido de Citas médicas -->
+
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Agenda la citas medicas de tus mascotas
+                            </button>
+                        </h2>
+                    </div>
+                    <!-- class="(@Model.modeForm =="edicion" ? "collapse show":"collapse")"   tipo de request que se va a utilizar = para abrir y cerrar el formulario -->
+                    <div id="collapseOne" class="(@Model.modeForm =="edicion" ? "collapse show":"collapse")" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body"> <!--  tipo de request que se va a utilizar -->
+                            <!-- Registro y agendamiento -->
+                            <!--  columna 1  -->
+                            <form method="POST">
+                            <div class="container">
+                                <div class="row">
+
+                                    <input
+                                    type ="hidden" style="display:none" 
+                                     asp-for="@Model.mascotaActual.Id" type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite el nombre de su mascota, campo obligatorio*" name="Id">
+
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <!--  asp-for="@Model.mascotaActual.NombreMascota" esta etiqueta se pone para conectar el objeto mascotaActual  -->
+                                            <label asp-for="@Model.mascotaActual.NombreMascota" for="id-mascota-nombre">Nombre de la mascota*</label>
+                                            <input asp-for="@Model.mascotaActual.NombreMascota" type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite el nombre de su mascota, campo obligatorio*" name="NombreMascota" required autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.mascotaActual.FechaNacimiento" for="id-mascota-FechaNacimiento">Fecha de nacimiento*</label> 
+                                            <input asp-for="@Model.mascotaActual.FechaNacimiento" type="date" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite la fecha de nacimiento de su mascota, campo obligatorio*" name="FechaNacimiento" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!--  columna 2  -->
+                            <div class="containerdespl">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.mascotaActual.Especie"for="id-mascota-Especie">Especie</label>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="Especie" required>
+                                                <option>Canino</option>
+                                                <option>Felino</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                        
+                                            <label asp-for="@Model.mascotaActual.Cita.Triage"for="id-mascota-Triage">Tipo de consulta</label>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="Triage" required>
+                                                <option>Urgencias </option>
+                                                <option>Consulta médica general</option>
+                                                <option>Esterilización</option>
+                                                <option>Desparacitación</option>
+                                                <option>Profilaxis</option>
+                                                <option>Consulta de nutrición</option>
+                                                <option>Consulta de Geriátrica</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                             <!--  columna 3  -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.mascotaActual.Cita.FechaRegistroCita" for="id-mascota-FechaRegistroCita">Fecha de registro</label>
+                                            <input type="date" class="form-control" id="exampleFormControlInput1"name="FechaRegistroCita">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label asp-for="@Model.mascotaActual.Cita.FechaAtencionCita" for="id-mascota-FechaAtencionCita">Seleccione fecha y horario para la asignación de su cita*</label>
+                                            <input asp-for="@Model.mascotaActual.Cita.FechaAtencionCita" type="date" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite la fecha de nacimiento de su mascota, campo obligatorio*" name="FechaAtencionCita">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-success" asp-page-handler="Add">Agregar</button>
+                            @if(Model.modeForm =="edicion"){
+                                <button type="button" class="btn btn-info" asp-page-handler="Edit">Editar</button>
+
+                            }
+                           
+</form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Consulta las citas medicas de tus mascotas
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="(@Model.modeForm =="edicion" ? "collapse show":"collapse show")" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                             <!--  lista  -->
+                             <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre de la mascota</th>
+      <th scope="col">Especie</th>
+      <th scope="col">Fecha de nacimiento</th>
+      <th> 
+          Acciones
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      
+      @*@for(int i =0;i<5;i++){    //usar lenguaje c# para crear filas
+          <tr>
+      <th scope="row">@(i+1)</th>  <!--  lista  -->
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>mdo</td>
+    </tr>
+
+      }*@
+      
+
+     
+    @if(Model.listaMascotas != null){
+      foreach(var  m in Model.listaMascotas)
+    {
+        <tr>
+      <th scope="row">@m.Id</th>  <!--  lista  -->
+      <td>@m.NombreMascota</td>
+      <td>@m.Especie</td>
+      <td>@m.FechaNacimiento</td>
+      <td>
+          <div class="row" style="with:220px;">
+              <div class="col">
+                <a  class="btn btn-success" asp-page="/Cliente/Cliente" asp-route-id= "@m.Id">Editar</a>
+                
+
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+  Eliminar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confimar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Estas seguro de eliminar?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+
+         <form method="POST">
+         <button type="button" class="btn btn-info" asp-page-handler="Delete" asp-route-id= "@m.Id">Si, Estoy seguro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      </td>
+    </tr>
+
+    }  
+       
+        
+    }
+    
+  </tbody>
+</table>
+ </div>
+ </div>
+ </div>
+
+ </div>
+ </div>
+
+        <!-- contenido de Vacunación -->
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <!-- vacunas para perro -->
+
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                Vacunas para perros
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseThree" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <!-- Registro y agendamiento -->
+                            <!--  columna 1  -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Nombre de la mascota*</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite el nombre de su mascota, campo obligatorio*">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Fecha de nacimiento*</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite la fecha de nacimiento de su mascota, campo obligatorio*">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                            <!--  fila 4  -->
+
+
+                            <div class="containerdespl">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Tipo de vacuna obligatoria</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>El mosquillo canino</option>
+                                                <option>La hepatitis infecciosa</option>
+                                                <option>La parvovirosis</option>
+                                                <option>La leptospirosis</option>
+                                                <option>La rabia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Dosis</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>8 semanas </option>
+                                                <option>12 semanas</option>
+                                                <option>16 semanas</option>
+                                                <option>16 meses</option>
+                                                <option>Refuerzo anual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <!--  fila 5  -->
+
+
+                            <div class="containerdespl">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Tipo para perros opcionales</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>La tos de las perreras</option>
+                                                <option>La enfermedad de Lyme</option>
+                                                <option>La babesiosis canina</option>
+                                                <option>Infecciones por hongos</option>
+                                                <option>La leishmaniasis</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Dosis</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>8 semanas </option>
+                                                <option>12 semanas</option>
+                                                <option>16 semanas</option>
+                                                <option>16 meses</option>
+                                                <option>Refuerzo anual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <!--  Vacunas para gatos  -->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Vacunas para gatos
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <!-- Registro y agendamiento -->
+                            <!--  columna 1  -->
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Nombre de la mascota*</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite el nombre de su mascota, campo obligatorio*">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlInput1">Fecha de nacimiento*</label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="digite la fecha de nacimiento de su mascota, campo obligatorio*">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <!--  fila 4  -->
+
+
+                            <div class="containerdespl">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Tipo de vacuna obligatoria</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Rabia</option>
+                                                <option>Trivalente</option>
+                                                <option>Rinotraqueitis</option>
+                                                <option>Calicivirus</option>
+                                                <option>La panleucopenia</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Dosis</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>8 semanas </option>
+                                                <option>12 semanas</option>
+                                                <option>16 semanas</option>
+                                                <option>16 meses</option>
+                                                <option>Refuerzo anual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+                            <!--  fila 5  -->
+
+
+                            <div class="containerdespl">
+                                <div class="row">
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Tipo para perros opcionales</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>La Leucemia Viral Felina (LVF)</option>
+                                                <option>C.felis(Chlamydia)</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div class="form-group">
+                                            <label for="exampleFormControlSelect1">Dosis</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>8 semanas </option>
+                                                <option>12 semanas</option>
+                                                <option>16 semanas</option>
+                                                <option>16 meses</option>
+                                                <option>Refuerzo anual</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                Consulta las agenda de vacunas de tu mascota
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the second accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- contenido de Ordenes medicas -->
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Prescrición médica
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Some placeholder content for the second accordion panel. This panel is hidden by default.
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                aria-controls="collapseSix">
+                                Orden de cotrol médico
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some placeholder content for the second accordion panel. This panel is hidden by default.
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false"
+                                    aria-controls="collapseSeven">
+                                    Lista de mascotas
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Some placeholder content for the second accordion panel. This panel is hidden by
+                                default.
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                @if(Model.isNombreMascotaValid =="1"){
+                    <script>alert("Falta el id");</script>
+                }

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Y4dUUDXfMYsPe/qHf143VvHUmnCH4TLKdA8zA7/mm+whHk5q+nmmuUJolRSSDrwt+uBK5/SrHnYxVaMw4gLfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Diana\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

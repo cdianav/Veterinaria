@@ -1,0 +1,98 @@
+﻿@page
+@model Veterinaria.App.Presentacion.Pages.RegistroModel
+
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/registro.css">
+</head>
+
+<div class="regisdiv2">
+    <img class="regisimg1" src="~/img/regis1.png" alt="" />
+</div>
+<div class="regisdiv1">
+    <form  method="post">
+
+        <h1>Registrarse</h1>
+
+        <fieldset>
+            <legend><span class="number">1</span>Informacion basica</legend>
+            <label for="job">Selecciones el tipo de documento:</label>
+            <select asp-for="@Model.Propietario.TipoDocumento" id="job" name="user_job">
+                <optgroup label="Tipo de documento">
+                    <option value="cedula_ciudadania">CC</option>
+                    <option value="cedula_extranjeria">CE</option>
+                    <option value="pasaporte">PAP</option>
+                    <option value="tarjeta_identidad"> TI</option>
+            </select>
+
+            
+
+            <div class="form-row">
+                <div class="col">
+                    <input asp-for="@Model.Propietario.NumeroDocumento" type="number" class="form-control" placeholder="Numero de identificacion">
+                </div>
+                <div class="col">
+                    <input  asp-for="@Model.Propietario.FechaRegistro" type="date" class="form-control" placeholder="Fecha de registro">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <input  asp-for="@Model.Propietario.Nombre" type="text" class="form-control" placeholder="Nombre completo">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <input asp-for="@Model.Propietario.Correo" type="text" class="form-control" placeholder="Correo Electronico">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input asp-for="@Model.Propietario.Contraseña" type="password" class="form-control" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <input asp-for="@Model.Propietario.Edad" type="number" class="form-control" placeholder="Edad">
+                </div>
+                <div class="col">
+                    <input asp-for="@Model.Propietario.Telefono" type="number" class="form-control" placeholder="Telefono celular">
+                </div>
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+            <legend><span class="number">2</span>Informacion de tu mascota</legend>
+
+
+            <div class="form-row">
+                <div class="col">
+                    <input asp-for="@Model.Mascota.NombreMascota" type="text" class="form-control" placeholder="Nombre completo">
+                </div>
+                <div class="col">
+                    <input asp-for="@Model.Mascota.EdadMascota" type="number" class="form-control" placeholder="Edad">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="col">
+                    <input  asp-for="@Model.Mascota.raza" type="text" class="form-control" placeholder="Raza">
+                </div>
+                <div class="col">
+                    <input asp-for="@Model.Mascota.peso" type="number" class="form-control" placeholder="Peso (Kg)">
+                </div>
+            </div>
+
+            <label>Acepto terminos y condiciones:</label>
+            @Html.CheckBoxFor(m => m.IsChecked)
+            <label class="light" for="development"></label>
+
+        </fieldset>
+
+        <button type="submit">Registrarse</button>
+    </form>
+</div>

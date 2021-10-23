@@ -1,0 +1,349 @@
+﻿@page
+@model Veterinaria.App.Presentacion.Pages.AdminModel
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/admin.css">
+</head>
+<div class="admdv3">
+    <img class="adminimg1" src="~/img/admin1.png" alt="" />
+</div>
+<div class="admdv2">
+
+    <h2 class="admh1">Bienvenido a la administracion de Usuarios</h2>
+</div>
+<div class="admdv1">
+    <div class="accordion" id="accordionExample">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Veterinarios
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <form>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                    <option selected>Seleccione el documento</option>
+                                    <option value="1">CC</option>
+                                    <option value="2">PAP</option>
+                                    <option value="3">CE</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Numero de documento">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Nombre completo">
+                            </div>
+                            <div class="col">
+                                <input type="date" class="form-control" placeholder="Fecha de registro">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Telefono">
+                            </div>
+                            <div class="col">
+                                <input type="number" class="form-control" placeholder="Edad">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="email" class="form-control" placeholder="Correo">
+                            </div>
+                            <div class="col">
+                                <input type="password" class="form-control" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Especializacion">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Tarjeta profesional">
+                            </div>
+                        </div>
+
+                        <div class="col-auto my-1">
+                            <button type="submit" class="btn btn-primary"
+                                style="background-color: #2c9b9b; color: #ffff">Agregar</button>
+                            <button type="submit" class="btn btn-primary"
+                                style="background-color: #2c9b9b; color: #ffff">Editar</button>
+                            <button type="submit" class="btn btn-primary"
+                                style="background-color: #2c9b9b; color: #ffff">Buscar</button>
+                            <button type="submit" class="btn btn-primary"
+                                style="background-color: #2c9b9b; color: #ffff">Eliminar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Lista deVeterinarios
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Telefono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           @*  @for (int i = 1; i <= 5; i++)
+                            {
+                                <tr>
+                                    <th scope="row">@i</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>mdo</td>
+                                </tr>
+                            }*@
+
+                            
+                            @foreach(Veterinario v in Model.listaVeterinarios){
+                                <tr>
+                                    <th scope="row">@v.Index</th>
+                                    <td>@v.Nombre</td>
+                                    <td>@v.Correo</td>
+                                    <td>@v.Telefono</td>
+                                </tr>
+                                
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Clientes
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Seleccione el documento</option>
+                                <option value="1">CC</option>
+                                <option value="2">PAP</option>
+                                <option value="3">CE</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Numero de documento">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre completo">
+                        </div>
+                        <div class="col">
+                            <input type="date" class="form-control" placeholder="Fecha de registro">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Telefono">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Edad">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="email" class="form-control" placeholder="Correo">
+                        </div>
+                        <div class="col">
+                            <input type="password" class="form-control" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Agregar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Editar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Buscar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Lista de Clientes
+                    </button>
+                </h2>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Telefono</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>at</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>twitter</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Mascotas
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <form>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre completo">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Edad">
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Raza">
+                        </div>
+                        <div class="col">
+                            <input type="number" class="form-control" placeholder="Peso">
+                        </div>
+                    </div>
+
+                    <div class="col-auto my-1">
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Agregar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Editar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Buscar</button>
+                        <button type="submit" class="btn btn-primary"
+                            style="background-color: #2c9b9b; color: #ffff">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Lista de mascotas
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+
+                    <div class="card-body">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Telefono</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>mdo</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>at</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>twitter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

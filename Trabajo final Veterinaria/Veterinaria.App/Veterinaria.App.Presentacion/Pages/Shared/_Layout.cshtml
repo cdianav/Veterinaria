@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Veterinaria.App.Presentacion</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="stylesheet" href="~/css/barrainicio.css" />
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <nav class="nav1">
+            <div>
+                <a asp-area="" asp-page="/Index"><img class="img1" src="~/img/logo.png" alt="" /></a>
+            </div>
+            <div class="div2">
+
+                <ul>
+                    <li><a asp-area="" asp-page="/AdminVeterinario/Admin">Veterinarios</a></li>
+                    <li>
+                    <li><a asp-area="" asp-page="/VetPaciente/VetPaciente">Pacientes</a></li>
+                    <li>
+                        <a asp-area="" asp-page="/AdminVeterinario/Admin">Informacion</a>
+                        <ul>
+                            <li><a href="#">Convierte en veterinario</a></li>
+                            <li><a href="#">Comunidad felina</a></li>
+                            <li><a href="#">Comunidad canina</a></li>
+                            <li><a href="#">Consultoría</a></li>
+                            <li><a href="#">Centro de atención</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+
+            </div>
+<div class="barrdiv1"></div>
+            <a class="a1" asp-area="" asp-page="/Login/Login"><input class="btn1" type="button" value="Ingresar" /></a>
+            <a class="a2" asp-area="" asp-page="/Registro/Registro"><input class="btn2" type="button"
+                    value="Registrarme" /></a>
+
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

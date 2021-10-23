@@ -1,0 +1,38 @@
+﻿@page
+@model Veterinaria.App.Presentacion.Pages.LoginModel
+@{
+}
+
+<div class="logdiv5">
+  <img class="logimg1" src="~/img/log1.png" alt="" />
+</div>
+<div class="div4">
+
+  <form class="logform" action="index.html" method="post">
+
+    <h1 class="logh1">Ingresar</h1>
+
+    <fieldset>
+
+      <label class="loglabel">Seleccione el tipo de usuario:</label>
+      <input class="loginput" type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13"
+        class="light">Dueño de mascota</label><br>
+      <input class="loginput" type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13"
+        class="light">Veterinario</label><br>
+
+      <label class="loglabel" for="mail">Email:</label>
+      <input class="loginput" type="email" id="mail" name="user_email">
+
+      <label class="loglabel" for="password">Contraseña:</label>
+      <input class="loginput" type="password" id="password" name="user_password">
+
+    </fieldset>
+
+
+    
+    <a asp-area="" asp-page="/Cliente/Cliente">
+      <button class="logbutton" type="button">Ingresar</button>
+    </a>
+  </form>
+</div>
+<hr>
