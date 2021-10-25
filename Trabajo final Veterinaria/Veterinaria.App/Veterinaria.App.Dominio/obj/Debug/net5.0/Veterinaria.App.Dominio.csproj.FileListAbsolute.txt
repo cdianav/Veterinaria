@@ -10,3 +10,15 @@ C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Trabajo fina
 C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.dll
 C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\ref\Veterinaria.App.Dominio.dll
 C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.pdb
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\net5.0\Veterinaria.App.Dominio.deps.json
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\net5.0\Veterinaria.App.Dominio.dll
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\net5.0\ref\Veterinaria.App.Dominio.dll
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\bin\Debug\net5.0\Veterinaria.App.Dominio.pdb
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.AssemblyInfo.cs
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.dll
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\ref\Veterinaria.App.Dominio.dll
+C:\Users\Diana\Desktop\Mision tic2022\Cycle 3\desarrollo de sotware\Mis repositorios\Trabajo final Veterinaria\Veterinaria.App\Veterinaria.App.Dominio\obj\Debug\net5.0\Veterinaria.App.Dominio.pdb

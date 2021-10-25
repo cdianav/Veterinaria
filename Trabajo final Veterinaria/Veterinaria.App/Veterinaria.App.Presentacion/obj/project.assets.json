@@ -7471,11 +7471,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
+      "projectUniqueName": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
       "projectName": "Veterinaria.App.Presentacion",
-      "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
+      "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
       "packagesPath": "C:\\Users\\Diana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\obj\\",
+      "outputPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7490,11 +7490,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj": {
-              "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj"
+            "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj"
             },
-            "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Persistencia\\Veterinaria.App.Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Persistencia\\Veterinaria.App.Persistencia.csproj"
+            "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Persistencia\\Veterinaria.App.Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Persistencia\\Veterinaria.App.Persistencia.csproj"
             }
           }
         }

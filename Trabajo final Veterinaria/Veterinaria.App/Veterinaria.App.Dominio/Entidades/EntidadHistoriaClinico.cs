@@ -9,6 +9,8 @@ namespace Veterinaria.App.Dominio
         public DateTime FechaRegistroCitaH {get; set;}
         public DateTime FechaAtencionCitaH {get; set;}
         public String Diagnostico {get; set;}
+        public String Prescripcion {get; set;}
+
        public List<EntidadCitas> listaCitas {get; set;}
        
         

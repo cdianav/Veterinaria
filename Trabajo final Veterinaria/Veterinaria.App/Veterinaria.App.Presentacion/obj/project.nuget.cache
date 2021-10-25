@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Co0hr2wAj9BMDHp9dVscH5ZfWi0RjqgVoR4KXt4IwYViTto5yPT+HC3c9qVyx7aNW1aspVnPXokfeNPp2WcyUA==",
+  "dgSpecHash": "F1/v0fBrtts6l6jEBsCeZra2eI8Zj0N4fbwyj9FaLrz8mdUabevbDeL65c4JedM0P8HxfbR/yg+PoMsfVfX0/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
+  "projectFilePath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Presentacion\\Veterinaria.App.Presentacion.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Diana\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Diana\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.9\\microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",

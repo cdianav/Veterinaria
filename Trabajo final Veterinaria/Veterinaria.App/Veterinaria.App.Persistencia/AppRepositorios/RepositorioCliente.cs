@@ -47,7 +47,7 @@ namespace Veterinaria.App.Persistencia{
         }
 
         EntidadCliente IRepositorioCliente.GetCliente(int idCliente){
-            return this.appContext.Cliente.FirstOrDefault ( p => p.Id == idCliente);
+            return this.appContext.Cliente.Include("listaMisMascotas").FirstOrDefault ( p => p.Id == idCliente);
             
         }
 

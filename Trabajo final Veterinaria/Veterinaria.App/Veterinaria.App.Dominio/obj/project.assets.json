@@ -116,11 +116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
+      "projectUniqueName": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
       "projectName": "Veterinaria.App.Dominio",
-      "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
+      "projectPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\Veterinaria.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\Diana\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\obj\\",
+      "outputPath": "C:\\Users\\Diana\\Desktop\\Mision tic2022\\Cycle 3\\desarrollo de sotware\\Mis repositorios\\Trabajo final Veterinaria\\Veterinaria.App\\Veterinaria.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Diana\\AppData\\Roaming\\NuGet\\NuGet.Config"
